@@ -34,9 +34,9 @@ export default function Page() {
   };
 
 return (
-  <div className="min-h-screen transition-colors duration-300 bg-white text-zinc-900 dark:bg-zinc-900 dark:text-white">
+  <div className="min-h-screen transition-colors duration-300 bg-white text-zinc-950 dark:bg-zinc-950 dark:text-white">
     {/* Main Content */}
-    <main className="container mx-auto flex min-h-screen max-w-6xl items-center px-4 py-10 mb-12">
+    <main className="container mx-auto flex min-h-screen max-w-6xl items-center px-4 py-10 mb-14">
       <div className="grid w-full gap-8 md:grid-cols-2">
         {/* Image */}
         <div className="order-1 flex items-center justify-center md:order-2 me-0 lg:me-28">
@@ -55,10 +55,10 @@ return (
 
         {/* Text Content */}
         <div className="order-2 flex flex-col items-center text-center md:order-1 ms-0 lg:ms-24">
-          <h1 className="mb-1 mt-4 text-4xl font-bold tracking-tight text-zinc-900 dark:text-white sm:text-5xl lg:text-5xl">
+          <h1 className="mb-1 mt-4 text-4xl font-bold tracking-tight text-zinc-950 dark:text-white sm:text-5xl lg:text-5xl">
             <b>NAMRA</b>
           </h1>
-          <h1 className="mb-2 text-4xl font-bold tracking-tight text-zinc-900 dark:text-white sm:text-5xl lg:text-5xl">
+          <h1 className="mb-2 text-4xl font-bold tracking-tight text-zinc-950 dark:text-white sm:text-5xl lg:text-5xl">
             <b>MEVADA</b>
           </h1>
           <h2 className="mb-7 mt-3 text-xl sm:text-5xl lg:text-3xl font-medium text-zinc-700 dark:text-zinc-300">
@@ -99,7 +99,8 @@ return (
 
           <p className="mb-6 text-xl max-w-md text-zinc-700 dark:text-zinc-300 font-semibold">
             Passionate about building scalable, high-performance backend systems
-            with Node.js for modern businesses.
+            with Node.js and crafting dynamic, responsive user interfaces with
+            React for modern businesses.
           </p>
           <a
             href="https://res.cloudinary.com/dffsbxpp4/image/upload/v1736689857/dcl3ittil5gyem4ngxmr.pdf"

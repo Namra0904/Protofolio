@@ -4,12 +4,12 @@ import { Card, CardContent } from "@/components/ui/card";
 
 const About = () => {
   return (
-    <div className="w-full bg-white dark:bg-zinc-900 px-4 relative">
+    <div className="w-full bg-white dark:bg-zinc-950 px-4 relative">
       <h1 className="text-black dark:text-white text-5xl font-bold text-center mb-14">
         <b>ABOUT ME</b>
       </h1>
       <div className="max-w-7xl mx-auto relative">
-        <Card className="mb-8 dark:bg-zinc-900 border-0">
+        <Card className="mb-8 dark:bg-zinc-950 border-0 shadow-none">
           <CardContent className="">
             <p className="text-gray-800 dark:text-gray-300  text-lg ">
               Hi, I’m Namra Mevada, and I’ve loved technology since I was young.

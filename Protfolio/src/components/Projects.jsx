@@ -40,7 +40,7 @@ const projects = [
   },
   {
     id: 4,
-    projectName: "Bus Route Navigator",
+    projectName: "Route Navigator",
     projectDescription:
       "Created a console-based map navigator in Java using Dijkstra's algorithm to find the shortest path between locations, allowing user interaction for selecting start and end points to calculate the fastest route.",
     projectLink: "https://github.com/Namra0904/Bus_Route_Navigator",
@@ -58,7 +58,7 @@ export default function ProjectsShowcase() {
   };
 
   return (
-    <div className="w-full dark:bg-zinc-900 mb-8 px-8 py-10">
+    <div className="w-full dark:bg-zinc-950 mb-8 px-8 py-10">
       <h1 className="text-zinc-900 dark:text-white text-5xl font-bold text-center mb-14">
         <b>PROJECTS</b>
       </h1>
@@ -82,7 +82,7 @@ export default function ProjectsShowcase() {
                     target="_blank"
                     rel="noopener noreferrer"
                   >
-                    <Card className="relative bg-white dark:bg-zinc-900 shadow-md transition-all duration-300 transform hover:scale-105 hover:shadow-xl cursor-pointer border-0">
+                    <Card className="relative bg-white dark:bg-zinc-950 shadow-md transition-all duration-300 transform hover:scale-105 hover:shadow-xl cursor-pointer border-zinc-850">
                       <CardContent className="flex flex-col items-center justify-center p-6">
                         <div className="w-full h-36 mb-4">
                           {/* Increased height */}

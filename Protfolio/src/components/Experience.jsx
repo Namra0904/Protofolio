@@ -5,13 +5,13 @@ import { ExternalLink } from "lucide-react";
 
 const Experience = () => {
   return (
-    <div className="min-h-screen bg-white dark:bg-zinc-900 text-black dark:text-white py-16">
+    <div className="min-h-screen bg-white dark:bg-zinc-950 text-black dark:text-white py-16">
       <div className="px-4">
         <h1 className="text-zinc-900 dark:text-white text-5xl font-bold text-center mb-8">
           <b>Experience</b>
         </h1>
         <div className="max-w-7xl mx-auto relative">
-          <Card className="mb-8 dark:bg-zinc-900 border-0">
+          <Card className="mb-8 dark:bg-zinc-950 border-0">
             <CardContent className="p-6 space-y-6">
               {/* Logo and Title Section */}
               <div className="space-y-4">
