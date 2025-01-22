@@ -119,9 +119,9 @@ export default function ProjectsShowcase() {
             ))}
           </CarouselContent>
           {/* Previous Button */}
-          <CarouselPrevious className="sm:ms-0 bg-zinc-200 dark:bg-zinc-700 rounded-full hover:bg-zinc-300 dark:hover:bg-zinc-600 transition-colors ml-[40px] lg:ml-0" />
+          <CarouselPrevious className="sm:ms-0 bg-zinc-200 dark:bg-zinc-900 rounded-full hover:bg-zinc-300 dark:hover:bg-zinc-800 transition-colors ml-[40px] lg:ml-0 border-0" />
           {/* Next Button */}
-          <CarouselNext className="me-4 sm:me-0 bg-zinc-200 dark:bg-zinc-700 rounded-full hover:bg-zinc-300 dark:hover:bg-zinc-600 transition-colors mr-[40px] lg:mr-0" />
+          <CarouselNext className="me-4 sm:me-0 bg-zinc-200 dark:bg-zinc-900 rounded-full hover:bg-zinc-300 dark:hover:bg-zinc-800 transition-colors mr-[40px] lg:mr-0 border-0" />
         </Carousel>
       </div>
     </div>
