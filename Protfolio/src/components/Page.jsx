@@ -133,7 +133,7 @@ return (
       <button
         onClick={scrollToTop}
         className="fixed bottom-4 right-4 z-50 w-10 h-10 flex items-center justify-center p-3 rounded-full shadow-md 
-        bg-white text-zinc-900 hover:bg-zinc-100 dark:bg-zinc-700 dark:text-white dark:hover:bg-zinc-600 transition-all text-2xl"
+        bg-white text-zinc-950 hover:bg-zinc-100 dark:bg-zinc-900 dark:text-white dark:hover:bg-zinc-800 transition-all text-2xl"
       >
         ↑
       </button>
