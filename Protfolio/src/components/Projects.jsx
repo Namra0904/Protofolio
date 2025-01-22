@@ -82,7 +82,7 @@ export default function ProjectsShowcase() {
                     target="_blank"
                     rel="noopener noreferrer"
                   >
-                    <Card className="relative bg-white dark:bg-zinc-950 shadow-md transition-all duration-300 transform hover:scale-105 hover:shadow-xl cursor-pointer border-zinc-850">
+                    <Card className="relative bg-white dark:bg-zinc-950 shadow-md transition-all duration-300 transform hover:scale-105 hover:shadow-xl cursor-pointer border-0">
                       <CardContent className="flex flex-col items-center justify-center p-6">
                         <div className="w-full h-36 mb-4">
                           {/* Increased height */}
