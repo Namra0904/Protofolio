@@ -40,7 +40,7 @@ export default function GetInTouch() {
           {contactInfo.map((item, index) => {
             const Icon = item.icon;
             return (
-              <Link href={item.href} key={index}>
+              <a href={item.href} key={index}>
                 <Card className="relative shadow-md transition-all duration-300 transform hover:scale-105 hover:shadow-lg cursor-pointer dark:bg-zinc-950 border-0">
                   <CardContent className="flex items-center gap-4 p-6">
                     <Icon className="w-6 h-6 text-gray-500 dark:text-zinc-400" />
@@ -52,7 +52,7 @@ export default function GetInTouch() {
                     </div>
                   </CardContent>
                 </Card>
-              </Link>
+              </a>
             );
           })}
         </div>
