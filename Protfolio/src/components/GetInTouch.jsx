@@ -43,10 +43,10 @@ export default function GetInTouch() {
               <a href={item.href} key={index}>
                 <Card className="relative shadow-md transition-all duration-300 transform hover:scale-105 hover:shadow-lg cursor-pointer dark:bg-zinc-950 border-0">
                   <CardContent className="flex items-center gap-4 p-6">
-                    <Icon className="w-6 h-6 text-gray-500 dark:text-zinc-400" />
+                    <Icon className="w-6 h-6 text-zinc-700 dark:text-zinc-400" />
                     <div>
                       <h2 className="font-semibold text-lg">{item.title}</h2>
-                      <p className="text-gray-600 dark:text-zinc-400">
+                      <p className="text-zinc-700 dark:text-zinc-400">
                         {item.content}
                       </p>
                     </div>

@@ -104,7 +104,7 @@ return (
             React for modern businesses.
           </p>
           <a
-            href="https://res.cloudinary.com/dffsbxpp4/image/upload/v1736689857/dcl3ittil5gyem4ngxmr.pdf"
+            href="https://drive.google.com/file/d/1daw09umAG_Hvllrr72E7BfU2DwNKmIdn/view?usp=drive_link"
             target="_blank"
           >
             <Button
