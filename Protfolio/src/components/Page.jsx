@@ -6,6 +6,7 @@ import ProjectsShowcase from "@/components/Projects";
 import About from "@/components/About";
 import SkillsSection from "@/components/skill";
 import Experience from "@/components/Experience";
+import GetInTouch from "@/components//GetInTouch";
 
 
 export default function Page() {
@@ -97,7 +98,7 @@ return (
             </a>
           </div>
 
-          <p className="mb-6 text-xl max-w-md text-zinc-700 dark:text-zinc-300 font-semibold">
+          <p className="mb-6 text-xl max-w-md text-zinc-700 dark:text-white font-semibold">
             Passionate about building scalable, high-performance backend systems
             with Node.js and crafting dynamic, responsive user interfaces with
             React for modern businesses.
@@ -127,6 +128,8 @@ return (
     <ProjectsShowcase />
     {/* skill section */}
     <SkillsSection />
+    {/* Get In Touch section */}
+    <GetInTouch />
 
     {/* Scroll to Top Button */}
     {showScrollToTop && (
