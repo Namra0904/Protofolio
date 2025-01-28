@@ -41,7 +41,7 @@ export default function GetInTouch() {
             const Icon = item.icon;
             return (
               <a href={item.href} key={index}>
-                <Card className="relative shadow-md transition-all duration-300 transform hover:scale-105 hover:shadow-lg cursor-pointer dark:bg-zinc-950 border-0">
+                <Card className="relative shadow-md transition-all duration-300 transform hover:scale-105 hover:shadow-lg cursor-pointer border-0 dark:bg-zinc-900">
                   <CardContent className="flex items-center gap-4 p-6">
                     <Icon className="w-6 h-6 text-zinc-700 dark:text-zinc-400" />
                     <div>

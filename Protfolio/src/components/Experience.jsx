@@ -11,7 +11,7 @@ const Experience = () => {
           <b>Experience</b>
         </h1>
         <div className="max-w-7xl mx-auto relative">
-          <Card className="mb-8 dark:bg-zinc-950 border-0">
+          <Card className="mb-8 dark:bg-zinc-900 border-0">
             <CardContent className="p-6 space-y-6">
               {/* Logo and Title Section */}
               <div className="space-y-4">
