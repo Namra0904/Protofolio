@@ -1,128 +1,110 @@
-import * as React from "react";
-import { useState, useRef } from "react";
-
-import { Card, CardContent } from "@/components/ui/card";
-import {
-  Carousel,
-  CarouselContent,
-  CarouselItem,
-  CarouselNext,
-  CarouselPrevious,
-} from "@/components/ui/carousel";
+import { Card, CardContent, CardHeader, CardTitle } from "@/components/ui/card";
+import { Button } from "@/components/ui/button";
+import { Badge } from "@/components/ui/badge";
+import { Github } from "lucide-react";
+import PropTypes from "prop-types";
 
 const projects = [
   {
-    id: 1,
-    projectName: "Chat-Pulse",
-    projectDescription:
-      "A real-time chat application using the MERN stack, featuring secure JWT authentication, one-on-one and group chats, and WebSocket (Socket.io) integration.",
-    projectLink: "https://github.com/Namra0904/Chat_Pulse",
-    projectUrl:
-      "https://res.cloudinary.com/dffsbxpp4/image/upload/v1736787619/mcdcc73skh3qqkxym2sd.png",
+    id: "chat-pulse",
+    title: "Chat Pulse",
+    description:
+      "A real-time chat application built using the MERN stack, featuring secure JWT authentication, one-on-one and group chats, and real-time notifications. Integrated WebSocket (Socket.io) for instant messaging and updates, with a responsive user interface built in React.js.",
+    technologies: ["Node.js", "React.js", "Express.js", "MongoDB"],
+    githubUrl: "https://github.com/Namra0904/Chat_Pulse",
   },
   {
-    id: 2,
-    projectName: "Aarogyam",
-    projectDescription:
-      "Developed a healthcare platform for appointment scheduling, medical record management, and medication tracking for Admin, Hospital, Doctor, and Patient roles.",
-    projectLink: "https://github.com/Namra0904/Aarogyam",
-    projectUrl:
-      "https://res.cloudinary.com/dffsbxpp4/image/upload/v1737296474/v3hlpdeu6indvryi3qjh.jpg",
+    id: "network",
+    title: "Network",
+    description:
+      "Developed a full-stack social networking application ’Network’ using Django and React.js, implementing JWT authentication. Enabled core features including post creation, liking, saving, commenting, profile updates, and user interaction through following/unfollowing. Integrated username search for user discovery and connection.",
+    technologies: ["React.js", "Django", "Bootstrap"],
+    githubUrl: "https://github.com/Namra0904/Network",
   },
   {
-    id: 3,
-    projectName: "Network",
-    projectDescription:
-      "Developed a full-stack social app with Django and React.js, featuring posts, likes, comments, profiles, following, and username search.",
-    projectLink: "https://github.com/Namra0904/Network",
-    projectUrl:
-      "https://res.cloudinary.com/dffsbxpp4/image/upload/v1737295622/d0gpb9rjui2yig5vzthq.png",
+    id: "aarogyam",
+    title: "Aarogyam",
+    description:
+      "Developed a comprehensive healthcare platform for appointment booking, medical record management, and medication tracking for diverse roles: Admin, Hospital, Doctor, and Patient.",
+    technologies: ["Next.js", "Express.js", "PostgreSQL", "Bootstrap", "FastAPI", "TailwindCSS"],
+    githubUrl: "https://github.com/Namra0904/Aarogyam",
   },
   {
-    id: 4,
-    projectName: "Route Navigator",
-    projectDescription:
-      "Created a console-based map navigator in Java using Dijkstra's algorithm to find the shortest path between locations, allowing user interaction for selecting start and end points to calculate the fastest route.",
-    projectLink: "https://github.com/Namra0904/Bus_Route_Navigator",
-    projectUrl:
-      "https://res.cloudinary.com/dffsbxpp4/image/upload/v1737296146/tnh57a33exgupzhsx4n6.png",
+    id: "resume-builder",
+    title: "Resume Builder",
+    description:
+      "Designed and developed a responsive Resume Builder application using HTML, CSS, JavaScript, and Bootstrap. The app allows users to create customized resumes by selecting templates.",
+    technologies: ["HTML", "CSS", "Javascript", "Bootstrap"],
+    githubUrl: "https://github.com/Namra0904/Resume_Builder",
   },
 ];
 
+function ProjectCard({ project }) {
+  return (
+    <Card className="bg-white border-0 dark:bg-zinc-900 transition-all duration-300 transform hover:scale-105 hover:shadow-lg cursor-pointer">
+      <CardHeader className="flex items-center gap-4 p-6">
+        <CardTitle className="text-2xl font-semibold text-black dark:text-white mb-1">
+          {project.title}
+        </CardTitle>
+      </CardHeader>
+      <CardContent className="space-y-6">
+        <p className="text-gray-700 dark:text-zinc-400 leading-relaxed">
+          {project.description}
+        </p>
+
+        <div className="flex flex-wrap gap-2">
+          {project.technologies.map((tech) => (
+            <Badge
+              key={tech}
+              variant="secondary"
+              className="bg-gray-100 dark:bg-zinc-700 hover:bg-gray-200 dark:hover:bg-zinc-600 text-gray-700 dark:text-gray-300"
+            >
+              {tech}
+            </Badge>
+          ))}
+        </div>
+
+        <Button
+          variant="outline"
+          size="sm"
+          className="border-0 text-gray-700 dark:text-gray-300 mt-4 dark:bg-zinc-700 dark:hover:bg-zinc-600 hover:bg-gray-200"
+          asChild
+        >
+          <a
+            href={project.githubUrl}
+            target="_blank"
+            rel="noopener noreferrer"
+            className="flex items-center justify-center"
+          >
+            <Github className="w-5 h-5 mr-0" />
+            View Source
+          </a>
+        </Button>
+      </CardContent>
+    </Card>
+  );
+}
+
+ProjectCard.propTypes = {
+  project: PropTypes.shape({
+    id: PropTypes.string.isRequired,
+    title: PropTypes.string.isRequired,
+    description: PropTypes.string.isRequired,
+    technologies: PropTypes.arrayOf(PropTypes.string).isRequired,
+    githubUrl: PropTypes.string.isRequired,
+  }).isRequired,
+};
+
 export default function ProjectsShowcase() {
-  const carouselRef = useRef(null); // Reference for Carousel navigation
-  const [expandedId, setExpandedId] = useState(null); // Track which accordion is expanded
-
-  const toggleAccordion = (id) => {
-    setExpandedId(expandedId === id ? null : id); // Toggle the accordion for the selected project
-  };
-
   return (
     <div className="w-full dark:bg-zinc-950 mb-8 px-8 py-10">
-      <h1 className="text-zinc-900 dark:text-white text-5xl font-bold text-center mb-14">
+      <h1 className="text-gray-900 dark:text-white text-5xl font-bold text-center mb-14">
         <b>PROJECTS</b>
       </h1>
-      <div className="flex justify-center items-center lg:max-w-5xl md:max-w-xl mx-auto">
-        <Carousel
-          ref={carouselRef}
-          opts={{
-            align: "start",
-          }}
-          className="w-full"
-        >
-          <CarouselContent>
-            {projects.map((project) => (
-              <CarouselItem
-                key={project.id}
-                className="snap-start basis-full md:basis-1/3"
-              >
-                <div className="p-2">
-                  <a
-                    href={project.projectLink}
-                    target="_blank"
-                    rel="noopener noreferrer"
-                  >
-                    <Card className="relative bg-white dark:bg-zinc-900 shadow-md transition-all duration-300 transform hover:scale-105 hover:shadow-xl cursor-pointer border-0">
-                      <CardContent className="flex flex-col items-center justify-center p-6">
-                        <div className="w-full h-36 mb-4">
-                          {/* Increased height */}
-                          <img
-                            src={project.projectUrl}
-                            alt={project.projectName}
-                            className="w-full h-full object-contain " // Use object-cover for better cropping
-                          />
-                        </div>
-                        <h3 className="text-2xl font-bold text-zinc-900 dark:text-white font-serif">
-                          {project.projectName}
-                        </h3>
-                        <button
-                          className="text-zinc-600 dark:text-zinc-300 mt-2 text-sm hover:underline"
-                          onClick={(e) => {
-                            e.preventDefault();
-                            toggleAccordion(project.id);
-                          }}
-                        >
-                          {expandedId === project.id
-                            ? "Hide Description"
-                            : "Show Description"}
-                        </button>
-                        {expandedId === project.id && (
-                          <p className="mt-4 text-zinc-600 dark:text-zinc-300 text-center">
-                            {project.projectDescription}
-                          </p>
-                        )}
-                      </CardContent>
-                    </Card>
-                  </a>
-                </div>
-              </CarouselItem>
-            ))}
-          </CarouselContent>
-          {/* Previous Button */}
-          <CarouselPrevious className="sm:ms-0 bg-zinc-200 dark:bg-zinc-900 rounded-full hover:bg-zinc-300 dark:hover:bg-zinc-800 transition-colors ml-[40px] lg:ml-0 border-0" />
-          {/* Next Button */}
-          <CarouselNext className="me-4 sm:me-0 bg-zinc-200 dark:bg-zinc-900 rounded-full hover:bg-zinc-300 dark:hover:bg-zinc-800 transition-colors mr-[40px] lg:mr-0 border-0" />
-        </Carousel>
+      <div className="grid grid-cols-1 gap-6 md:grid-cols-2">
+        {projects.map((project) => (
+          <ProjectCard key={project.id} project={project} />
+        ))}
       </div>
     </div>
   );
