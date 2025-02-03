@@ -3,41 +3,7 @@ import { Button } from "@/components/ui/button";
 import { Badge } from "@/components/ui/badge";
 import { Github } from "lucide-react";
 import PropTypes from "prop-types";
-
-const projects = [
-  {
-    id: "chat-pulse",
-    title: "Chat Pulse",
-    description:
-      "A real-time chat application built using the MERN stack, featuring secure JWT authentication, one-on-one and group chats, and real-time notifications. Integrated WebSocket (Socket.io) for instant messaging and updates, with a responsive user interface built in React.js.",
-    technologies: ["Node.js", "React.js", "Express.js", "MongoDB"],
-    githubUrl: "https://github.com/Namra0904/Chat_Pulse",
-  },
-  {
-    id: "network",
-    title: "Network",
-    description:
-      "Developed a full-stack social networking application ’Network’ using Django and React.js, implementing JWT authentication. Enabled core features including post creation, liking, saving, commenting, profile updates, and user interaction through following/unfollowing. Integrated username search for user discovery and connection.",
-    technologies: ["React.js", "Django", "Bootstrap"],
-    githubUrl: "https://github.com/Namra0904/Network",
-  },
-  {
-    id: "aarogyam",
-    title: "Aarogyam",
-    description:
-      "Developed a comprehensive healthcare platform for appointment booking, medical record management, and medication tracking for diverse roles: Admin, Hospital, Doctor, and Patient.",
-    technologies: ["Next.js", "Express.js", "PostgreSQL", "Bootstrap", "FastAPI", "TailwindCSS"],
-    githubUrl: "https://github.com/Namra0904/Aarogyam",
-  },
-  {
-    id: "resume-builder",
-    title: "Resume Builder",
-    description:
-      "Designed and developed a responsive Resume Builder application using HTML, CSS, JavaScript, and Bootstrap. The app allows users to create customized resumes by selecting templates.",
-    technologies: ["HTML", "CSS", "Javascript", "Bootstrap"],
-    githubUrl: "https://github.com/Namra0904/Resume_Builder",
-  },
-];
+import { projects } from "@/common/data";
 
 function ProjectCard({ project }) {
   return (

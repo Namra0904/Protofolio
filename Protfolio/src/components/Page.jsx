@@ -1,4 +1,4 @@
-import React, { useState, useEffect } from "react";
+import { useState, useEffect } from "react";
 import { Button } from "@/components/ui/button";
 import { Github, Linkedin, Mail } from "lucide-react";
 import { ThemeToggle } from "@/components/ThemeToggle";
@@ -6,8 +6,7 @@ import ProjectsShowcase from "@/components/Projects";
 import About from "@/components/About";
 import SkillsSection from "@/components/skill";
 import Experience from "@/components/Experience";
-import GetInTouch from "@/components//GetInTouch";
-
+import GetInTouch from "@/components/GetInTouch";
 
 export default function Page() {
   const [showScrollToTop, setShowScrollToTop] = useState(false);

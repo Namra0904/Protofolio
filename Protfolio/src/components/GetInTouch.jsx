@@ -1,34 +1,7 @@
 import { Card, CardContent } from "@/components/ui/card";
-import { Mail, Phone, Linkedin, Github } from "lucide-react";
-import { BrowserRouter as Link } from "react-router-dom";
+import { contactInfo } from "@/common/data";
 
 export default function GetInTouch() {
-    const contactInfo = [
-      {
-        icon: Mail,
-        title: "Email",
-        content: "namramevada@gmail.com",
-        href: "mailto:namramevada@gmail.com",
-      },
-      {
-        icon: Phone,
-        title: "Phone",
-        content: "+91 8003895484",
-        href: "tel:+918003895484",
-      },
-      {
-        icon: Linkedin,
-        title: "LinkedIn",
-        content: "Connect with me",
-        href: "https://www.linkedin.com/in/namra-mevada-5658092a0/",
-      },
-      {
-        icon: Github,
-        title: "GitHub",
-        content: "View my work",
-        href: "https://github.com/Namra0904",
-      },
-    ];
 
   return (
     <div className=" bg-white dark:bg-zinc-950 text-black dark:text-white py-16 mb-8">
