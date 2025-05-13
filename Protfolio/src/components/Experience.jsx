@@ -38,7 +38,7 @@ const Experience = () => {
                 <div className="flex items-center gap-2">
                   <span>December 2024 - Present</span>
                   <span>•</span>
-                  <span>5 Mos</span>
+                  <span>6 Mos</span>
                 </div>
                 <div className="flex items-center gap-2">
                   <span>Ahmedabad</span>
