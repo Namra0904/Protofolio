@@ -7,7 +7,7 @@ import { projects } from "@/common/data";
 
 function ProjectCard({ project }) {
   return (
-    <Card className="bg-white border-0 dark:bg-zinc-900 transition-all duration-300 transform hover:scale-105 hover:shadow-lg cursor-pointer">
+    <Card className="bg-white border-0 dark:bg-zinc-900 transition-all duration-300 transform hover:scale-105 hover:shadow-2xl cursor-pointer">
       <CardHeader className="flex items-center gap-4 p-6">
         <CardTitle className="text-2xl font-semibold text-black dark:text-white mb-1">
           {project.title}
