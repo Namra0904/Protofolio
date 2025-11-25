@@ -103,7 +103,7 @@ export default function Page() {
               interfaces with React for modern businesses.
             </p>
             <a
-              href="https://drive.google.com/file/d/1oTNhxwlcT9_tc_VdS5eCzVtwgorwBQ0O/view?usp=drive_link"
+              href="https://drive.google.com/file/d/1F9ErsQo0AUsAa7NrvfWocLIXLO-8g7AK/view?usp=sharing"
               target="_blank"
             >
               <Button
